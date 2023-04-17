@@ -13,35 +13,22 @@ app.use(cors())
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(express.text)
 
 app.use("/openai", routes)
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, 'uploads/')
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.originalname)
-    }
-})
 
-const upload = multer({ storage: storage })
 
-app.post('/upload-file', upload.single('file'), (req, res) => {
+/* app.post('/upload-text', (req, res) => {
     try {
-        const fileData = req.file;
 
-        console.log('Received file:', fileData);
+        console.log("text recu " + req);
 
-        if (!fileData) {
-            throw new Error('No file uploaded!');
-        }
-
-        res.send('File uploaded successfully!');
+        res.send('Text uploaded successfully!');
     } catch (err) {
         console.error(err);
         res.status(500).send('Upload failed!');
     }
-});
+}); */
 
 app.listen(port, () => {
     console.log(`Server running at port ${port}`)
