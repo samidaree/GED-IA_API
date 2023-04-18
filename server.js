@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const multer = require('multer');
 const cors = require("cors");
 
 require("dotenv").config()
@@ -17,8 +16,7 @@ app.use(express.text)
 
 app.use("/openai", routes)
 
-
-/* app.post('/upload-text', (req, res) => {
+app.post('/upload-text', (req, res) => {
     try {
 
         console.log("text recu " + req);
@@ -28,7 +26,7 @@ app.use("/openai", routes)
         console.error(err);
         res.status(500).send('Upload failed!');
     }
-}); */
+});
 
 app.listen(port, () => {
     console.log(`Server running at port ${port}`)

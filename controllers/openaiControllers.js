@@ -7,6 +7,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration)
 
 const generateSummary = async (req, res) => {
+    console.log("text");
     const { prompt } = req.body;
     console.log(prompt);
 
