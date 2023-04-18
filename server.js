@@ -4,7 +4,7 @@ const cors = require("cors");
 
 require("dotenv").config()
 
-const routes = require("./routes/api")
+const routes = require("./routes/api");
 
 const port = process.env.PORT
 
@@ -12,14 +12,17 @@ app.use(cors())
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(express.text)
 
 app.use("/openai", routes)
+
+app.get("/test", (req, res) => {
+    res.send("<h1> Hello</h1>")
+})
 
 app.post('/upload-text', (req, res) => {
     try {
 
-        console.log("text recu " + req);
+        console.log("text recu " + req.body["text"]);
 
         res.send('Text uploaded successfully!');
     } catch (err) {

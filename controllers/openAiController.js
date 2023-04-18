@@ -1,16 +1,16 @@
+
 const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-    apiKey: process.env.API_KEY
+    apiKey: process.env.OPENAI_API_KEY
 })
 
 const openai = new OpenAIApi(configuration)
 
 const generateSummary = async (req, res) => {
-    console.log("text");
-    const { prompt } = req.body;
-    console.log(prompt);
-
+    console.log("generate summary");
 }
 
-module.exports = { generateSummary }; 
+module.exports = {
+    generateSummary,
+}

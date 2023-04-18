@@ -1,9 +1,9 @@
 const express = require("express");
 
-const { generateSummary } = require("../controllers/openaiControllers");
+const { generateSummary } = require("../controllers/openAiController");
 
 const router = express.Router();
 
-router.post("/summary", generateSummary)
+router.post("/file", generateSummary)
 
-module.exports = router;
+module.exports = router; 
