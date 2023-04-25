@@ -137,9 +137,7 @@ const generateKeys = async (req, res) => {
     console.log("API key " + api_key);
     console.log(" Prompt " + prompt);
 
-    /*if (key.trim().length == 0) {
-        throw new Error("Invalid API key");
-    }*/
+
     if (prompt.trim().length == 0) {
         prompt = "Donne moi les mots clés du texte suivant "
     }
