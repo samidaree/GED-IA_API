@@ -1,6 +1,15 @@
 
 const mysql = require('mysql');
 
+/**
+ * Saves data to a MySQL Database
+ * @async 
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ * @returns {Promise<void>} 
+
+**/
+
 const saveDatabase = async (req, res) => {
     const name = mysql.escape(req.body.name);
     const resumeStr = req.body.summary;
@@ -69,6 +78,15 @@ const saveDatabase = async (req, res) => {
     }
 };
 
+/**
+ * Generates a summary article per artcile using OpenAI's GPT-3
+ * @async 
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ * @returns {Promise<void>} 
+
+**/
+
 const generateSummary = async (req, res) => {
 
     const { Configuration, OpenAIApi } = require("openai");
@@ -117,7 +135,14 @@ const generateSummary = async (req, res) => {
     res.json({ summary: summary });
 }
 
+/**
+ * Generates keywords article per artcile using OpenAI's GPT-3
+ * @async 
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ * @returns {Promise<void>} 
 
+**/
 const generateKeys = async (req, res) => {
     const api_key = req.body.key
 
