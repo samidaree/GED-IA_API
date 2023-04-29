@@ -1,26 +1,26 @@
-# GED-IA_API
+# GED-IA
 GED IA est une application web de gestion electronique de documents automatique développée avec React, Node.JS, Scss et l'API d'Open AI. 
 
 ## Indexation
-![](Demos/indexation.gif)
+![](docs/Demos/indexation.gif)
 
 ## Résumé
-![](Demos/resume.gif)
+![](docs/Demos/resume.gif)
 
 ## Prompt personnalisé
-![](Demos/prompt.gif)
+![](docs/Demos/prompt.gif)
 
 ## Fichier sans table de matières
-![](Demos/tdm.gif)
+![](docs/Demos/tdm.gif)
 
 ## Ouverture fichier
-![](Demos/ouverture.gif)
+![](docs/Demos/ouverture.gif)
 
 ## API Key invalide 
-![](Demos/apikey.gif)
+![](docs/Demos/apikey.gif)
 
 ## Sauvegarde Base de données
-![](Demos/successDB.gif)
+![](docs/Demos/successDB.gif)
 
 ## Live Project 
 https://ged-ia-front.onrender.com/
