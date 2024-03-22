@@ -13,11 +13,17 @@ GED IA est une application web de gestion electronique de documents automatique 
 ## Fichier sans table de matières
 ![](docs/Demos/tdm.gif)
 
+## Parcourir fichiers
+![](docs/Demos/parcourir.gif)
+
 ## Ouverture fichier
 ![](docs/Demos/ouverture.gif)
 
+## Choisir un autre fichier 
+![](docs/Demos/ouverture.gif)
+
 ## API Key invalide 
-![](docs/Demos/apikey.gif)
+![](docs/Demos/autre_fichier.gif)
 
 ## Sauvegarde Base de données
 ![](docs/Demos/successDB.gif)
