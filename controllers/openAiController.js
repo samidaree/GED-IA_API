@@ -115,7 +115,7 @@ const generateSummary = async (req, res) => {
         keywords[`\n\n Résumé de l'article ${article.title} \n `] =
           completion.choices[0].message.content
       } catch (error) {
-        if (error.response && error.response.status === 401) {
+        if (error.code == 'invalid_api_key') {
           console.log('Invalid API key')
           return res.status(401).json({ error: 'Invalid API key' })
         } else {
@@ -172,7 +172,7 @@ const generateKeys = async (req, res) => {
         keywords[`\n\nMots clé de l'article ${article.title} \n `] =
           completion.choices[0].message.content
       } catch (error) {
-        if (error.response && error.response.status === 401) {
+        if (error.code == 'invalid_api_key') {
           console.log('Invalid API key')
           return res.status(401).json({ error: 'Invalid API key' })
         } else {
