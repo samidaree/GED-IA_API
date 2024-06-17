@@ -29,4 +29,4 @@ GED IA est une application web de gestion electronique de documents automatique 
 ![](docs/Demos/successDB.gif)
 
 ## Live Project 
-https://ged-ia-front.onrender.com/
+[https://ged-uic.samidare.co/](https://ged-uic.samidare.co/)
